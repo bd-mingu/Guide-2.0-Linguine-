@@ -940,6 +940,11 @@ applications:
     eureka_client_serviceUrl_defaultZone: ${vcap.services.portal-eureka-service.credentials.uri}/eureka/
     eureka_instance_hostname: ${vcap.application.uris[0]}
 
+    # api manifest의 spring_security_username + ":" + spring_security_password를 Base64 인코딩하여 입력해야 합니다.
+    # 예를 들어서 api manifest의 값이 아래와 같다면
+    # spring_security_username: user
+    # spring_security_password: password
+    # user:password 를 인코딩해야합니다.
     paasta_portal_api_authorization_base64: Basic YWRtaW46b3BlbnBhYXN0YQ==
     paasta_portal_api_url: http://PORTAL-API
 
@@ -1084,6 +1089,11 @@ applications:
     eureka_client_serviceUrl_defaultZone: ${vcap.services.portal-eureka-service.credentials.uri}/eureka/
     eureka_instance_hostname: ${vcap.application.uris[0]}
 
+    # api manifest의 spring_security_username + ":" + spring_security_password를 Base64 인코딩하여 입력해야 합니다.
+    # 예를 들어서 api manifest의 값이 아래와 같다면
+    # spring_security_username: user
+    # spring_security_password: password
+    # user:password 를 인코딩해야합니다.
     paasta_portal_api_authorization_base64: Basic YWRtaW46b3BlbnBhYXN0YQ==
     paasta_portal_api_url: http://PORTAL-API
 
